@@ -15,8 +15,10 @@ function Homework06() {
     { brand: "Nissan", price: 25000, isDiesel: false },
     { brand: "Audi", price: 50000, isDiesel: true },
   ];
+  let value : Car;
+  
+  const carList = cars.map((value:Car) => {
 
-  const carList = cars.map((value) => {
     return (
       // <div key={v4()} className="card"></div>
       <div className="card">
