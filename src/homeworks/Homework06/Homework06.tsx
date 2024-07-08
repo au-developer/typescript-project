@@ -1,12 +1,10 @@
 import "./styles.css";
-// import { v4 } from "uuid";
+import { v4 } from "uuid";
+import { ReactNode } from "react";
+import {Car} from "./types" 
 
 function Homework06() {
-  interface Car {
-    brand: string;
-    price: number;
-    isDiesel: boolean;
-  }
+
 
   const cars: Car[] = [
     { brand: "BMW", price: 20000, isDiesel: true },
@@ -15,13 +13,12 @@ function Homework06() {
     { brand: "Nissan", price: 25000, isDiesel: false },
     { brand: "Audi", price: 50000, isDiesel: true },
   ];
-  let value : Car;
-  
-  const carList = cars.map((value:Car) => {
+
+  const carList: ReactNode = cars.map((value: Car) => { // ReactNode - типизация массива обьектов
 
     return (
-      // <div key={v4()} className="card"></div>
-      <div className="card">
+      <div key={v4()} className="card">
+        {/* <div  key={Math.random()}className="card"> */}
         <p>Brand: {value.brand}</p>
         <p>Price: {value.price}$</p>
         <p>Fuel type: {value.isDiesel ? "diesel" : "another fuel"}</p>
@@ -31,4 +28,5 @@ function Homework06() {
 
   return <div className="page-wrapper">{carList}</div>;
 }
+
 export default Homework06;

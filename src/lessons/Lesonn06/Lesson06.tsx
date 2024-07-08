@@ -3,7 +3,7 @@ function Lesson06() {
   let userFullName: string = "John Johnson";
   // userFullName = 100; - error!
   userFullName = "Bibi King";
-  let hello = `100 ${userFullName}`; // автоматически присвоит тип значения, зависимо от 1 присвоеного значения
+  let hello = `100 ${userFullName}`; // автоматически присвоит тип значения, зависимо от 1 присвоеного значения даже без типизации
   //hello = 100;- error!
   console.log(hello);
 

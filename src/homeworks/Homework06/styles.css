@@ -15,7 +15,8 @@
   align-items: center;
   gap: 20px;
   width: 200px;
-  height: 250px;
+  min-height: 250px;
+  height: fit-content;
   border: 2px solid rgb(43, 43, 47);
   color: rgb(33, 136, 129);
   background-color: rgba(49, 57, 58, 0.451);
