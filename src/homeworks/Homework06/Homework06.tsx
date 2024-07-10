@@ -1,7 +1,9 @@
-import "./styles.css";
+
 import { v4 } from "uuid";
 import { ReactNode } from "react";
+
 import {Car} from "./types" 
+import {PageWrapper, CardWrapper} from "./styles";
 
 function Homework06() {
 
@@ -17,16 +19,16 @@ function Homework06() {
   const carList: ReactNode = cars.map((value: Car) => { // ReactNode - типизация массива обьектов
 
     return (
-      <div key={v4()} className="card">
+      <CardWrapper key={v4()}>
         {/* <div  key={Math.random()}className="card"> */}
         <p>Brand: {value.brand}</p>
         <p>Price: {value.price}$</p>
         <p>Fuel type: {value.isDiesel ? "diesel" : "another fuel"}</p>
-      </div>
+      </CardWrapper>
     );
   });
 
-  return <div className="page-wrapper">{carList}</div>;
+  return <PageWrapper>{carList}</PageWrapper>;
 }
 
 export default Homework06;

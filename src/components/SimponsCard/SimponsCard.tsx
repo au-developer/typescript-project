@@ -26,19 +26,18 @@
 
 // 2 Вармант - в аргументах обьект, декомпозиция его внутри 
 import { SimponsCardProps} from "./types";
-
-import "./styles.css";
+import {CardWrapper, CardItem, Avatar} from "./styles";
 
 
 function SimponsCard({ simData }:SimponsCardProps) {
    const { avatar, firstName, lastName, job, hobby } = simData;
   return (
-    <div className="card-wrapper">
-      <img className="avatar" src={avatar} alt="Avatar" />
-      <p className="card-item">Full name: {`${firstName} ${lastName}`}</p>
-      <p className="card-item">Job: {job}</p>
-      <p className="card-item">Hobby: {hobby}</p>
-    </div>
+    <CardWrapper>
+      <Avatar src={avatar} alt="Avatar" />
+      <CardItem>Full name: {`${firstName} ${lastName}`}</CardItem>
+      <CardItem>Job: {job}</CardItem>
+      <CardItem>Hobby: {hobby}</CardItem>
+    </CardWrapper>
   );
 }
 

@@ -5,7 +5,7 @@ import SimponsCard from "components/SimponsCard/SimponsCard";
 import Input from "components/Input/Input";
 import Feedback from "components/Feedback/Feedback";
 
-import "./styles.css";
+import {PageWrapper} from "./styles";
 
 function Homework07() {
   const [like, setLike] = useState<number>(0);
@@ -33,7 +33,7 @@ function Homework07() {
   };
 
   return (
-    <div className="page-wrapper">
+    <PageWrapper>
       <LoginForm />
       {/* <SimponsCard
         avatar={homerSimpson.avatar}
@@ -58,7 +58,7 @@ function Homework07() {
         onLike={onLike}
         resetResults={resetResults}
       />
-    </div>
+    </PageWrapper>
   );
 }
 
