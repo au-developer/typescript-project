@@ -1,7 +1,10 @@
+import { HTMLInputTypeAttribute } from "react";
+
 export interface InputProps {
-    id:string,
-    name:string,
-    type: string,
-    placeholder: string,
-    label: string
-  }
+  id: string;
+  name: string;
+  type?: HTMLInputTypeAttribute;
+  placeholder?: string;
+  label: string;
+
+}

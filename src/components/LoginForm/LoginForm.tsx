@@ -1,18 +1,15 @@
+import { MouseEvent } from "react";
+
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 
-import {MouseEvent} from "react"
-
 import "./styles.css";
 
-
 function LoginForm() {
-
-
-  const login = (event:MouseEvent):void => {
+  const login = (event: MouseEvent): void => {
     event.preventDefault();
     console.log("User logged in succesfully");
-  }
+  };
 
   return (
     <form className="login-form-container">
