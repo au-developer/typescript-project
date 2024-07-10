@@ -1,6 +1,6 @@
 //import { useState } from "react";
-import "./styles.css";
-import Button from "../Button/Button";
+import "./styles.ts";
+import Button from "components/Button/Button";
 
 interface CounterProps {
   count: number;
