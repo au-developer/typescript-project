@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
+import {colors} from "styles/colors"
 
 interface StyleErrorProps {
-  error?: undefined | string;
+  $error?: undefined | string;
 }
 
 const changeInputBackGround = (disabled: boolean | undefined) => {
@@ -37,11 +38,11 @@ export const InputComponent = styled("input")<StyleErrorProps>`
   border-radius: 4px;
   padding: 12px;
   outline: none;
-  border-color: ${({ disabled, error }) =>
-    changeInputColorBorder(disabled, error)};
+  border-color: ${({ disabled, $error }) =>
+  changeInputColorBorder(disabled, $error)};
   background-color: ${({ disabled }) => changeInputBackGround(disabled)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  ::placeholder {
+  & ::placeholder {
     color: #6f6f6f;
     font-size: 16px;
   }

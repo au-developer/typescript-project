@@ -53,7 +53,7 @@ function Homework08() {
           placeholder="Put your data"
           label="First Name"
           disabled={false}
-          error={"some string"}
+          $error={"some string"}
         />
       </ControlSize>
       <ControlSize>
@@ -63,7 +63,7 @@ function Homework08() {
           placeholder="Put your data"
           label="First Name"
           disabled={false}
-          error={undefined}
+          $error={undefined}
         />
       </ControlSize>
       <ControlSize>
@@ -73,7 +73,7 @@ function Homework08() {
           placeholder="Put your data"
           label="First Name"
           disabled={true}
-          error={"some string"}
+          $error={"some string"}
         />
       </ControlSize>
       <ControlSize>
@@ -83,7 +83,7 @@ function Homework08() {
           placeholder="Put your data"
           label="First Name"
           disabled={true}
-          error={undefined}
+         $error={undefined}
         />
       </ControlSize>
     </PageWrapperHw08>
