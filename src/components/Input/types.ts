@@ -7,7 +7,7 @@ export interface InputProps {
   placeholder?: string;
   label: string;
   disabled?: boolean;
-  $error?: undefined | string;
-  value?: string;
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  error?: undefined | string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }

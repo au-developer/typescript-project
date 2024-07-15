@@ -30,7 +30,7 @@ function Homework08() {
         <Button
           isRed={false}
           disabled={true}
-          name="Send"
+          name="Disabled not red"
           onClick={() => {
             console.log("This Button is work!!!");
           }}
@@ -40,7 +40,7 @@ function Homework08() {
         <Button
           isRed={true}
           disabled={true}
-          name="Delete"
+          name="Disabled is red"
           onClick={() => {
             console.log("This Button is work!!!");
           }}
@@ -53,7 +53,9 @@ function Homework08() {
           placeholder="Put your data"
           label="First Name"
           disabled={false}
-          $error={"some string"}
+          error={"some string"}
+          value=""
+          onChange ={()=>{}}
         />
       </ControlSize>
       <ControlSize>
@@ -63,7 +65,9 @@ function Homework08() {
           placeholder="Put your data"
           label="First Name"
           disabled={false}
-          $error={undefined}
+          error={undefined}
+          value=""
+          onChange ={()=>{}}
         />
       </ControlSize>
       <ControlSize>
@@ -73,7 +77,9 @@ function Homework08() {
           placeholder="Put your data"
           label="First Name"
           disabled={true}
-          $error={"some string"}
+          error={"some string"}
+          value=""
+          onChange ={()=>{}}
         />
       </ControlSize>
       <ControlSize>
@@ -83,7 +89,9 @@ function Homework08() {
           placeholder="Put your data"
           label="First Name"
           disabled={true}
-         $error={undefined}
+         error={undefined}
+         value=""
+         onChange ={()=>{}}
         />
       </ControlSize>
     </PageWrapperHw08>

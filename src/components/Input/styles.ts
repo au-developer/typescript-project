@@ -5,9 +5,23 @@ interface StyleErrorProps {
   $error?: undefined | string;
 }
 
+// Общая функция для изменения стилей
+const getStyledInputBorder = (
+  disabled: boolean | undefined,
+  error: string | undefined
+) => {
+  if (typeof error === "string") {
+    return colors.ERROR;
+  } else if (disabled) {
+    return "grey";
+  } else {
+    return colors.DISABLED;
+  }
+};
+
 const changeInputBackGround = (disabled: boolean | undefined) => {
   if (disabled) {
-    return "grey";
+    return colors.DISABLED;
   }
 };
 
@@ -16,7 +30,7 @@ const changeInputColorBorder = (
   error: string | undefined
 ) => {
   if (error && disabled === false) {
-    return "red";
+    return colors.ERROR;
   }
 };
 
@@ -38,12 +52,11 @@ export const InputComponent = styled("input")<StyleErrorProps>`
   border-radius: 4px;
   padding: 12px;
   outline: none;
-  border-color: ${({ disabled, $error }) =>
-  changeInputColorBorder(disabled, $error)};
+  border-color: ${({ disabled, $error }) =>changeInputColorBorder(disabled, $error)};
   background-color: ${({ disabled }) => changeInputBackGround(disabled)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   & ::placeholder {
-    color: #6f6f6f;
+    color: ${colors.PLACEHOLDER};
     font-size: 16px;
   }
 `;

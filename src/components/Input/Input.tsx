@@ -9,7 +9,7 @@ function Input({
   placeholder,
   label,
   disabled,
-  $error,
+  error,
   value,
   onChange
 }: InputProps) {
@@ -22,7 +22,7 @@ function Input({
         type={type}
         placeholder={placeholder}
         disabled={disabled}
-        $error = {$error}
+        $error = {error}
         value={value}
         onChange={onChange}
       />

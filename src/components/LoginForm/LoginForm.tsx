@@ -21,6 +21,8 @@ function LoginForm() {
           type="email"
           placeholder="Enter your email"
           label="Email"
+          value=""
+          onChange ={()=>{}}
         />
         <Input
           id="password-id"
@@ -28,6 +30,8 @@ function LoginForm() {
           type="password"
           placeholder="Enter your password"
           label="Password"
+          value=""
+          onChange ={()=>{}}
         />
       </InputsContainer>
       <Button onClick={login} name="Login" type="submit" />

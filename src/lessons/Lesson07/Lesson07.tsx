@@ -11,7 +11,7 @@ import { useState } from "react";
 import Button from "components/Button/Button";
 import Counter from "components/Counter/Counter";
 
-import "./styles.css";
+import {PageWrapper} from "./styles";
 import { WEATHER_CODES } from "./types";
 
 
@@ -123,11 +123,11 @@ const sentCountToServer = async()=>{
 };
 
   return (
-    <div className="page-wrapper">
+    <PageWrapper>
      <Counter count={count} onPlus={onPlus} onMinus={onMinus} /> 
      <Button name="Send count" onClick={sentCountToServer} />
         
-    </div>
+    </PageWrapper>
   );
 }
 export default Lesson07;

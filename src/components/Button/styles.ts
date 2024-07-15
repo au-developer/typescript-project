@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { colors } from "styles/colors";
 
 interface StyledButtonProps{
   $isRed?: boolean
@@ -8,8 +9,8 @@ const getButtonColor = (disabled:boolean | undefined, isRed:boolean  | undefined
   if(disabled){
     return "grey";
   }else if(isRed){
-    return "red";
-  }else{return "blue"}
+    return colors.ERROR;
+  }else{return colors.PRIMARY_BLUE}
 
 }
 

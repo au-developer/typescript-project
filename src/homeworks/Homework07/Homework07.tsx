@@ -50,6 +50,8 @@ function Homework07() {
         label="first name"
         placeholder="Enter your first name"
         name="First Name"
+        value=""
+        onChange ={()=>{}}
       />
       <Feedback
         like={like}

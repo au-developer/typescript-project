@@ -1,3 +1,5 @@
+import { PageWrapper } from "./styles";
+
 function Lesson06() {
   // ----------------------------------------------------------String
   let userFullName: string = "John Johnson";
