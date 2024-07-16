@@ -60,3 +60,9 @@ export const InputComponent = styled("input")<StyleErrorProps>`
     font-size: 16px;
   }
 `;
+
+export const ErrorContainer = styled.div`
+color: ${colors.ERROR};
+font-size: 18;
+font-weight: bold;
+`;

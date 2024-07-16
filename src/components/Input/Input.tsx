@@ -1,6 +1,7 @@
 import { InputProps } from "./types";
 
 import { InputWrapper, InputLabel, InputComponent } from "./styles";
+import { ErrorContainer } from "components/Input/styles";
 
 function Input({
   id,
@@ -26,6 +27,7 @@ function Input({
         value={value}
         onChange={onChange}
       />
+     {!! error&& <ErrorContainer>{error}</ErrorContainer>}
     </InputWrapper>
   );
 }
