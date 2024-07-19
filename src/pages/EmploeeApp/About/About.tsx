@@ -1,11 +1,12 @@
 import Button from "components/Button/Button";
+import { APP_ROUTES }from "constants/routes"
 import { PageWrapper, ButtonControl } from "./styles";
 import { useNavigate } from "react-router-dom";
 
 function About() {
   const navigate = useNavigate();
   const goToHomePage = () => {
-    navigate("/");
+    navigate(APP_ROUTES.HOME);
   };
   const goBack = () => {
     navigate(-1);

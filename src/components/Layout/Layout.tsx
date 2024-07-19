@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { v4 } from "uuid";
+import { APP_ROUTES }from "constants/routes"
 import {
   LayoutWrapper,
   Header,
@@ -18,8 +20,42 @@ function Layout({ children }: LayoutProps) {
 
   const navigate = useNavigate();
   const goToHomePage = ()=>{
-    navigate("/");
+    navigate(APP_ROUTES.HOME);
   }
+
+  const linksRoutes = {
+    [APP_ROUTES.HOME]: "Home",
+    [APP_ROUTES.CLIENTS]: "Clients",
+    [APP_ROUTES.COUNTACT_US]: "Contact Us",
+    [APP_ROUTES.ABOUT]: "About",
+    [APP_ROUTES.LOGIN]: "Login",
+  };
+
+  const headerLinks = Object.keys(linksRoutes).map((appRoute: string) => {
+    return (
+      <Link
+        key={v4()}
+        style={({ isActive }) => ({
+          fontWeight: isActive ? "bold" : "normal",
+          textDecoration: isActive ? "underline" : "none",
+        })}
+        to={appRoute}
+      >
+        {linksRoutes[appRoute as keyof typeof linksRoutes]}
+      </Link>
+    );
+  });
+
+  const footerLinks = Object.keys(linksRoutes).map((appRoute: string) => {
+    return (
+      <FooterLink key={v4()} to={appRoute}>
+        {linksRoutes[appRoute as keyof typeof linksRoutes]}
+      </FooterLink>
+    );
+  });
+
+
+
   return (
     <LayoutWrapper>
       <Header>
@@ -30,21 +66,22 @@ function Layout({ children }: LayoutProps) {
           />
         </Logo  >
         <NavigationContainer>
+          {headerLinks}
+          {/* <Link style={({isActive})=>({fontWeight:isActive ? "bold" : "normal",
+            textDecoration:isActive ? "underline" : "none"
+          })} to ={APP_ROUTES.HOME} >Home</Link>
           <Link style={({isActive})=>({fontWeight:isActive ? "bold" : "normal",
             textDecoration:isActive ? "underline" : "none"
-          })} to ="/" >Home</Link>
+          })} to={APP_ROUTES.COUNTACT_US}>Contact Us</Link>
           <Link style={({isActive})=>({fontWeight:isActive ? "bold" : "normal",
             textDecoration:isActive ? "underline" : "none"
-          })} to="/contactUs">Contact Us</Link>
+          })}to={APP_ROUTES.ABOUT}>About</Link>
           <Link style={({isActive})=>({fontWeight:isActive ? "bold" : "normal",
             textDecoration:isActive ? "underline" : "none"
-          })}to="/about">About</Link>
+          })} to={APP_ROUTES.LOGIN}>Log In</Link>
           <Link style={({isActive})=>({fontWeight:isActive ? "bold" : "normal",
             textDecoration:isActive ? "underline" : "none"
-          })} to="/login">Log In</Link>
-          <Link style={({isActive})=>({fontWeight:isActive ? "bold" : "normal",
-            textDecoration:isActive ? "underline" : "none"
-          })} to="/clients">Clients</Link>
+          })} to={APP_ROUTES.CLIENTS}>Clients</Link> */}
 
         </NavigationContainer>
       </Header>
@@ -57,11 +94,12 @@ function Layout({ children }: LayoutProps) {
           />
         </FooterLogo>
         <FooterNavigation>
-          <FooterLink to ="/">Home</FooterLink>
-          <FooterLink to="/contactUs">Contact Us</FooterLink>
-          <FooterLink to="/about">About</FooterLink>
-          <FooterLink to="/login">Log In</FooterLink>
-          <FooterLink to="/clients">Clients</FooterLink>
+          {footerLinks}
+          {/* <FooterLink to ={APP_ROUTES.HOME}>Home</FooterLink>
+          <FooterLink to={APP_ROUTES.COUNTACT_US}>Contact Us</FooterLink>
+          <FooterLink to={APP_ROUTES.ABOUT}>About</FooterLink>
+          <FooterLink to={APP_ROUTES.LOGIN}>Log In</FooterLink>
+          <FooterLink to={APP_ROUTES.CLIENTS}>Clients</FooterLink> */}
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>
