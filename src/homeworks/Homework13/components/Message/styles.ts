@@ -1,18 +1,16 @@
 import styled from "@emotion/styled";
 
-export const PageWrapper = styled.div`
+export const MessageWrapper = styled.div`
   display: flex;
   align-items: center;
-width: 100%;
+  width: 100%;
+  gap: 10px;
 `;
 
-export const Title = styled.p`
-font-size:24px;
-font-weight:bold;
-`
-export const Text = styled.p`
-font-size:10px;
-font-weight:bold;
-
-
-`
+export const MessageTitle = styled.p`
+  font-size: 24px;
+  font-weight: bold;
+`;
+export const MessageText = styled.p`
+  font-size: 24px;
+`;

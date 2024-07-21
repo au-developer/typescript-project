@@ -1,19 +1,20 @@
 import styled from "@emotion/styled";
 
-export const PageWrapper = styled.div`
+export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 30px;
   padding: 30px;
   width: 100%;
   height: 100%;
   height: fit-content;
   border: 2px black solid;
-  background-color: grey;
+  background-color: lightgrey;
   border-radius: 8px;
-  gap: 30px;
+  
 `;
 
-export const FullNameTittke = styled.p`
+export const FullNameTitle = styled.p`
 font-size:24px;
 font-weight: bold;
 `

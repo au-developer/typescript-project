@@ -1,9 +1,9 @@
-import Button from "components/Button/Button";
-
 import { useState, ChangeEvent, createContext } from "react";
-import Card from "../Card/Card";
+
+import Button from "components/Button/Button";
+import Card from "homeworks/Homework13/components//Card/Card";
 import {
-  PageWrapper,
+  BlogManagementWrapper,
   TextAreaWrapper,
 } from "homeworks/Homework13/components/BlogManagement/styles";
 
@@ -12,7 +12,7 @@ export const BlockManagementContext = createContext<string>("");
 // Здесь postTextArea хранит текст из текстового поля, а message хранит
 //отправленное сообщение. useState задает начальное состояние как пустую строку.
 function BlogManagement() {
-  const [postTextArea, addPost] = useState<string>(""); // состояние текстареи
+  const [textAreavalue, setTextAreavalue] = useState<string>(""); // состояние текстареи
   const [message, setMessage] = useState<string>(""); // состояние переданое из текстареа и положеное в хранилище
 
   // Функция onChangeText вызывается при изменении текста в текстовом поле и
@@ -20,14 +20,14 @@ function BlogManagement() {
 
   const onChangeText = (event: ChangeEvent<HTMLTextAreaElement>) => {
     // отлов события
-    addPost(event.target.value);
+    setTextAreavalue(event.target.value);
   };
   // Функция postMessage устанавливает значение message равным текущему тексту
   //из postTextArea, т.е. отправляет сообщение.
 
   const postMessage = () => {
     // отправка информации
-    setMessage(postTextArea);
+    setMessage(textAreavalue);
   };
 
   return (
@@ -35,16 +35,16 @@ function BlogManagement() {
     <BlockManagementContext.Provider value={message}>
       {" "}
       //
-      <PageWrapper>
+      <BlogManagementWrapper>
         <TextAreaWrapper
           name="message"
-          value={postTextArea}
+          value={textAreavalue}
           onChange={onChangeText}
           placeholder="Enter Text Here"
         />
-        <Button name="Post" onClick={postMessage} />
+        <Button name="Запостить" onClick={postMessage} />
         <Card />
-      </PageWrapper>
+      </BlogManagementWrapper>
     </BlockManagementContext.Provider>
   );
 }

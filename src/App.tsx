@@ -9,7 +9,7 @@ import Apple from "pages/EmploeeApp/Clients/Apple/Apple";
 import Google from "pages/EmploeeApp/Clients/Google/Google";
 import Facebook from "pages/EmploeeApp/Clients/Facebook/Facebook";
 import GlobalStyles from "styles/GlobalStyles";
-import { APP_ROUTES }from "constants/routes"
+import { APP_ROUTES } from "constants/routes";
 // Lessons
 //import Lesson06 from "./lessons/Lesonn06/Lesson06";
 // import Lesson07  from "./lessons/Lesson07/Lesson07";
@@ -33,12 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-     
-     
-     
-     
-     
-     
+
       {/* <Layout>
         <Routes>
           <Route path={APP_ROUTES.HOME} element={<Home />} />
@@ -66,7 +61,7 @@ function App() {
       {/* <Homework11/> */}
       {/* <Lesson12/> */}
       {/* <Lesson13/> */}
-      <Homework13/>
+      <Homework13 />
     </BrowserRouter>
   );
 }

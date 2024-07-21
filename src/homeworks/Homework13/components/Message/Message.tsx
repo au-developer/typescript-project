@@ -1,16 +1,16 @@
 import  {BlockManagementContext} from "homeworks/Homework13/components/BlogManagement/BlogManagement"
 import { useContext } from "react";
-import { PageWrapper, Title, Text } from "./styles";
+import { MessageWrapper, MessageTitle, MessageText } from "./styles";
 
 function Message() {
 
 const message = useContext<string>(BlockManagementContext);
 
 
-  return <PageWrapper>
-<Title>Пост</Title>
-<Text>{message}</Text>
-  </PageWrapper>;
+  return <MessageWrapper>
+<MessageTitle>Message:</MessageTitle>
+<MessageText>{message}</MessageText>
+  </MessageWrapper>;
 }
 
 export default Message;
