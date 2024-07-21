@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
+import { colors } from "@mui/material";
 
 export const PageWrapper = styled.div`
   display: flex;
   flex: 1;
-  padding: 100px;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  border: 4px red solid;
-  width: 800px;
+  padding: 20px;
+background-color: blue;
 
 `;

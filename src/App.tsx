@@ -25,7 +25,7 @@ import { APP_ROUTES }from "constants/routes"
 //import Homework08 from "homeworks/Homework08/Homework08";
 //import Homework09 from "homeworks/Homework09/Homework09";
 //import Homework11 from "homeworks/Homework11/Homework11"
-//import Homework13 from "homeworks/Homework13/Homework13";
+import Homework13 from "homeworks/Homework13/Homework13";
 //Consultations
 //import Consultation_03 from "consultations/Consultation_03/Consultation_03";
 
@@ -33,7 +33,13 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+     
+     
+     
+     
+     
+     
+      {/* <Layout>
         <Routes>
           <Route path={APP_ROUTES.HOME} element={<Home />} />
           <Route path={APP_ROUTES.ABOUT} element={<About />} />
@@ -45,7 +51,7 @@ function App() {
           <Route path={APP_ROUTES.GOOGLE} element={<Google />} />
           <Route path={APP_ROUTES.NOT_FOUND} element="Page not found !"/>
         </Routes>
-      </Layout>
+      </Layout> */}
       {/* <Lesson06/> */}
       {/* <Homework06 /> */}
       {/* <Lesson07/> */}
@@ -60,7 +66,7 @@ function App() {
       {/* <Homework11/> */}
       {/* <Lesson12/> */}
       {/* <Lesson13/> */}
-      {/* <Homework13/> */}
+      <Homework13/>
     </BrowserRouter>
   );
 }
