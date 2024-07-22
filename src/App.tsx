@@ -1,3 +1,8 @@
+import LayoutEmployee from "pages/EmployeeProjectApp/components/LayoutEmployee/LayoutEmployee";
+import {APP_ROUTES} from "pages/EmployeeProjectApp/components/LayoutEmployee/types"
+import Employees from "pages/EmployeeProjectApp/components/Employees/Employees";
+import CreateEmployee from "pages/EmployeeProjectApp/components/CreateEmployee/CreateEmployee";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "pages/EmploeeApp/About/About";
 import Home from "pages/EmploeeApp/Home/Home";
@@ -9,7 +14,7 @@ import Apple from "pages/EmploeeApp/Clients/Apple/Apple";
 import Google from "pages/EmploeeApp/Clients/Google/Google";
 import Facebook from "pages/EmploeeApp/Clients/Facebook/Facebook";
 import GlobalStyles from "styles/GlobalStyles";
-import { APP_ROUTES } from "constants/routes";
+//import { APP_ROUTES } from "constants/routes";
 // Lessons
 //import Lesson06 from "./lessons/Lesonn06/Lesson06";
 // import Lesson07  from "./lessons/Lesson07/Lesson07";
@@ -25,7 +30,7 @@ import { APP_ROUTES } from "constants/routes";
 //import Homework08 from "homeworks/Homework08/Homework08";
 //import Homework09 from "homeworks/Homework09/Homework09";
 //import Homework11 from "homeworks/Homework11/Homework11"
-import Homework13 from "homeworks/Homework13/Homework13";
+// import Homework13 from "homeworks/Homework13/Homework13";
 //Consultations
 //import Consultation_03 from "consultations/Consultation_03/Consultation_03";
 
@@ -61,7 +66,15 @@ function App() {
       {/* <Homework11/> */}
       {/* <Lesson12/> */}
       {/* <Lesson13/> */}
-      <Homework13 />
+      {/* <Homework13 /> */}
+      <LayoutEmployee>
+        <Routes>
+          <Route path={APP_ROUTES.HOME} element={<CreateEmployee />} />
+          <Route path={APP_ROUTES.CREATE_EMPLOYEE} element={<CreateEmployee />} />
+          <Route path={APP_ROUTES.EMPLOYEE} element={<Employees />} />
+          <Route path="*" element="Page Not Found!" />
+        </Routes>
+      </LayoutEmployee>
     </BrowserRouter>
   );
 }
