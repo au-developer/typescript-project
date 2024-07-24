@@ -11,7 +11,7 @@ function Employees() {
     useContext<LayoutEmployeeContextData>(InfoAboutEmployee);
 
     if(!dataFromCreateEmployee.employeeData) {
-      return <div></div>
+      return <></>
     }
 
   return (
